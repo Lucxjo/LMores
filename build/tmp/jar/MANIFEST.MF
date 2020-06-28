@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Ludo's Mores
+Implementation-Version: 1.15.2-0.0.1
+Specification-Vendor: examplemodsareus
+Specification-Title: examplemod
+Implementation-Timestamp: 2020-06-28T19:22:07+0100
+Specification-Version: 1
+Implementation-Vendor: examplemodsareus
+
