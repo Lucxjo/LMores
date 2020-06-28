@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lmore:block/titanium_block"
+    }
+  }
+}

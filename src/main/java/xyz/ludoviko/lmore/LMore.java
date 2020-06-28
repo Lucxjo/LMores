@@ -1,12 +1,8 @@
 package xyz.ludoviko.lmore;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -16,13 +12,12 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import xyz.ludoviko.lmore.util.R;
+import xyz.ludoviko.lmore.util.RegistryHandler;
 
-import java.util.stream.Collectors;
 
-
-@Mod(LMore.ID)
+@Mod(R.MOD_ID)
 public class LMore{
-    public static final String ID = "lmore";
     public static final Logger logger = LogManager.getLogger();
     public static LMore instance;
 
@@ -31,6 +26,7 @@ public class LMore{
 
         modEB.addListener(this::setup);
         modEB.addListener(this::enqueueIMC);
+        RegistryHandler.init();
         modEB.addListener(this::processIMC);
         modEB.addListener(this::doClientStuff);
 
