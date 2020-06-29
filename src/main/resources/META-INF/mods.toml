@@ -18,7 +18,7 @@ version="${version}" #mandatory
  # A display name for the mod
 displayName="Ludo's Mores" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
-updateJSONURL="https://raw.githubusercontent.com/TheBornTurtle/LMores/master/fmlUpdates.json" #optional
+updateJSONURL="https://raw.githubusercontent.com/Lucxjo/LMores/mc-1.15.2/fmlUpdates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
 displayURL="https://ludoviko.xyz/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display

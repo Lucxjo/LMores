@@ -1,7 +1,5 @@
 package xyz.ludoviko.lmore;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,7 +12,6 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import xyz.ludoviko.lmore.objects.items.LMItems;
 import xyz.ludoviko.lmore.util.LMRegistryHandler;
 import xyz.ludoviko.lmore.util.R;
 
@@ -56,11 +53,4 @@ public class LMore {
     public void onServerStarting(FMLServerStartingEvent e) {
         logger.info("LMores: Server Start Event");
     }
-
-    public static final ItemGroup TAB = new ItemGroup("lmore") {
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(LMItems.TITANIUM_INGOT.get());
-        }
-    };
 }
