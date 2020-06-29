@@ -1,0 +1,10 @@
+{
+  "homepage": "<homepage/download page for your mod>",
+  "1.15.2": {
+    "0.0.1": "<changelog for this version>"
+  },
+  "promos": {
+    "<mcversion>-latest": "0.0.1",
+    "<mcversion>-recommended": "0.0.1"
+  }
+}
