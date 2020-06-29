@@ -15,8 +15,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xyz.ludoviko.lmore.objects.items.LMItems;
+import xyz.ludoviko.lmore.util.LMRegistryHandler;
 import xyz.ludoviko.lmore.util.R;
-import xyz.ludoviko.lmore.util.RegistryHandler;
 
 
 @Mod(R.MOD_ID)
@@ -29,7 +29,7 @@ public class LMore {
 
         modEB.addListener(this::setup);
         modEB.addListener(this::enqueueIMC);
-        RegistryHandler.init();
+        LMRegistryHandler.init();
         modEB.addListener(this::processIMC);
         modEB.addListener(this::doClientStuff);
 
