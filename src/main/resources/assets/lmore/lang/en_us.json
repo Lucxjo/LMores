@@ -2,9 +2,7 @@
   "item.lmore.titanium_ingot": "Titanium Ingot",
   "item.lmore.titanium_nugget": "Titanium Nugget",
   "item.lmore.oreo_item": "Oreo",
-  "itemGroup.lmoreAll":  "All Ludo's Mores",
-  "itemGroup.lmoreItem": "Ludo's Items",
-  "itemGroup.lmoreBlock": "Ludo's Blocks",
+  "itemGroup.lmore": "Ludo's Mores",
   "block.lmore.titanium_block": "Titanium Block",
   "block.lmore.titanium_ore": "Titanium Ore"
 }
