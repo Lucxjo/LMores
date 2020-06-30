@@ -4,19 +4,19 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xyz.ludoviko.lmore.util.LMRegistryHandler;
 import xyz.ludoviko.lmore.util.R;
+import xyz.ludoviko.lmore.world.gen.LMOreGen;
 
 
 @Mod(R.MOD_ID)
+@EventBusSubscriber(modid = R.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class LMore {
     public static final Logger logger = LogManager.getLogger();
     public static LMore instance;
@@ -47,6 +47,11 @@ public class LMore {
     }
 
     private void processIMC(final InterModProcessEvent e) {
+    }
+
+    @SubscribeEvent
+    public static void gameLoaded(FMLLoadCompleteEvent e) {
+        LMOreGen.genOre();
     }
 
     @SubscribeEvent
